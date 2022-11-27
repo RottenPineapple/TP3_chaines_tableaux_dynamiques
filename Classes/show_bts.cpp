@@ -2,7 +2,7 @@
  * @ Author: LORD
  * @ Create Time: 2022-10-19 11:29:13
  * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-14 16:34:12
+ * @ Modified time: 2022-11-16 14:46:17
  * @ Description: heehee
  */
 
@@ -14,12 +14,12 @@ void show_bts()
     const char *adr_chaine = {"BtsSNIR2"};
 
     for (; i < 3; i++)
-        cout << adr_chaine[i];
+        std::cout << adr_chaine[i];
     i = 0;
-    cout << endl;
+    std::cout << std::endl;
     while (adr_chaine[i] != '\0')
-        cout << adr_chaine[i++];
-    cout << endl;
+        std::cout << adr_chaine[i++];
+    std::cout << std::endl;
 }
 
 void show_bts2()
@@ -28,22 +28,10 @@ void show_bts2()
     const char *adr_chaine = {"BtsSNIR2"};
 
     for (; i < 3; i++)
-        cout << *(adr_chaine + i);
+        std::cout << *(adr_chaine + i);
     i = 0;
-    cout << endl;
+    std::cout << std::endl;
     while (*(adr_chaine + i) != '\0')
-        cout << *(adr_chaine + i++);
-    cout << endl;
-}
-
-void show_bts3()
-{
-    int i = 0;
-    const char *adr_chaine = {"BtsSNIR2"};
-    char const *copie = adr_chaine;
-
-    cout << endl;
-    while (*copie != '\0')
-        cout << copie++;
-    cout << endl;
+        std::cout << *(adr_chaine + i++);
+    std::cout << std::endl;
 }

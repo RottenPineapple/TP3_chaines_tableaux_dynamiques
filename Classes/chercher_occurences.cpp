@@ -2,7 +2,7 @@
  * @ Author: LORD
  * @ Create Time: 2022-10-04 16:28:10
  * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-14 16:33:53
+ * @ Modified time: 2022-11-16 14:45:24
  * @ Description: Cherche les occurences de lettres dans un prénom
  */
 
@@ -15,19 +15,19 @@ void nb_occurences()
     char *str;
     char lettre;
 
-    cout << "Combien y'a-t'il de lettres dans votre prénom ? ";
-    cin >> n;
+    std::cout << "Combien y'a-t'il de lettres dans votre prénom ? ";
+    std::cin >> n;
     str = new char[n];
-    cout << "Quel est votre prénom ? " << endl;
-    cin >> str;
-    cout << "Quelle lettre recherchez vous ? ";
-    cin >> lettre;
+    std::cout << "Quel est votre prénom ? " << std::endl;
+    std::cin >> str;
+    std::cout << "Quelle lettre recherchez vous ? ";
+    std::cin >> lettre;
     for (int i = 0; i < n; i++)
-        cout << str[i];
-    cout << endl;
+        std::cout << str[i];
+    std::cout << std::endl;
     for (int i = 0; i < n; i++) {
         if (lettre == str[i])
             occ++;
     }
-    cout << "Il y a " << occ << " \"" << lettre << "\" dans \"" << str << "\".";
+    std::cout << "Il y a " << occ << " \"" << lettre << "\" dans \"" << str << "\".";
 }

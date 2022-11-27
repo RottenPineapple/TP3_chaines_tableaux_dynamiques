@@ -2,12 +2,14 @@
  * @ Author: LORD
  * @ Create Time: 2022-05-12 14:17:42
  * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-14 16:34:03
+ * @ Modified time: 2022-11-16 14:45:46
  * @ Description: main file
  */
 
 #include "header.hpp"
 #include <stdlib.h>
+
+using namespace std;
 
 int main(int ac, char **av)
 {
@@ -29,7 +31,6 @@ int main(int ac, char **av)
                     cout << endl;
                     show_bts2();
                     cout << endl;
-                    show_bts3();
                     break;
                 case '4':
                     extension();

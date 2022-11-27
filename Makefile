@@ -12,7 +12,6 @@ SRC	=	Classes/main.cpp	\
 		Classes/my_strlen.cpp	\
 		Classes/show_bts.cpp	\
 		Classes/my_strcmp.cpp	\
-		Classes/my_strcat.cpp	\
 		Classes/extension.cpp
 
 NAME	=	build/Release/bin/TP3

@@ -2,7 +2,7 @@
  * @ Author: LORD
  * @ Create Time: 2022-05-12 14:40:19
  * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-14 16:32:55
+ * @ Modified time: 2022-11-16 14:59:38
  * @ Description: header file
  */
 
@@ -20,8 +20,6 @@ void show_bts2();
 void show_bts3();
 int my_strcmp(char *str1, char *str2);
 void *my_strcat(char *str1, char *str2);
-void extension();
-
-using namespace std;
+int extension();
 
 #endif /* !HEADER_H_ */

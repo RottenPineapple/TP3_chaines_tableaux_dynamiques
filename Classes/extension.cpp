@@ -2,66 +2,51 @@
  * @ Author: LORD
  * @ Create Time: 2022-11-08 12:01:50
  * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-14 16:35:10
+ * @ Modified time: 2022-11-16 15:08:59
  * @ Description: extension
  */
 
 #include "header.hpp"
 
-int get_alpha(char const *str)
+int extension()
 {
-    int nb = -1;
-
-    for (int i = 0; str[i] != '\0'; i++) {
-        if ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122) {
-            nb = 0;
-        } else {
-            nb = -1;
-        }
-    }
-    return (nb);
-}
-
-void extension()
-{
+    int i = 0;
     int j = 0;
-    char choix;
-    bool verif = false;
-    char extension = new char[5];
-    char *str = new char[my_strlen(str) * sizeof(char) + 1];
+    bool verif_dot = false;
+    bool verif_ext = false;
+    char *extension = new char[5];
+    char *str;
 
-    cout << "Entrez h pour avoir de l'aide !" << endl;
-    do {
-        switch (choix) {
-        case 'h':
-            cout << "Entrez c pour continuer, q pour quitter :)" << endl;
-            break;
-        case 'c':
-            cout << "Quelle extension souhaitez vous vérifier ?" << endl;
-            cin >> extension;
-            if (get_alpha(extension) == 0) {
-                for (int i = 0; str[i] != '\0'; i++) {
-                    if (str[i] == '.' && extension[j] != '\0' && verif != false) {
-                        if (str[i] == extension[j]) {
-                            j++;
-                            verif = true;
-                        } else {
-                            verif = false;
-                        }
-                    }
-                }
-            } else {
-                break;
-            }
-            if (verif == true) {
-                cout << "L'extension est bien un(e) : " << extension << endl;
-            } else {
-                break;
-            }
-            break;
-        default:
-            cout << "nan :(" << endl;
-            break;
+    str = new char[my_strlen(str) * sizeof(char) + 1];
+    std::cout << "Quelle extension souhaitez-vous vérifier ?" << std::endl;
+    std::cin >> extension;
+    std::cout << "Quel fichier souhaitez-vous vérifier ?" << std::endl;
+    std::cin >> str;
+    if (my_strlen(extension) > 5)
+        return (84);
+    for (int k = 0; str[k] != '\0' && verif_dot != true; k++) {
+        if (str[k] == '.')
+            verif_dot = true;
+    }
+    if (verif_dot != true) {
+        std::cout << "Le fichier ne contient pas d'extension." << std::endl;
+        return (84);
+    }
+    for (; str[i] != '.'; i++);
+    i++;
+    for (; str[i] != '\0'; i++) {
+        if (extension[j] == str[i]) {
+            verif_ext = true;
+        } else {
+            verif_ext = false;
+            i = my_strlen(str);
         }
-    } while (choix != 'q');
+        j++;
+    }
+    if (verif_ext == true) {
+        std::cout << "L'extension correspond bien au fichier que vous avez entré. :)" << std::endl;
+    } else {
+        std::cout << "L'extension ne correspond pas. :'(" << std::endl;
+    }
+    return (0);
 }
