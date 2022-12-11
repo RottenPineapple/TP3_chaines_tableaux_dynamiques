@@ -1,8 +1,8 @@
 /**
  * @ Author: LORD
  * @ Create Time: 2022-11-08 12:01:50
- * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-16 15:08:59
+ * @ Modified by: Valentin LAGARD
+ * @ Modified time: 2022-11-27 21:54:35
  * @ Description: extension
  */
 
@@ -15,15 +15,14 @@ int extension()
     bool verif_dot = false;
     bool verif_ext = false;
     char *extension = new char[5];
-    char *str;
+    char *str = new char[10];
 
-    str = new char[my_strlen(str) * sizeof(char) + 1];
     std::cout << "Quelle extension souhaitez-vous vérifier ?" << std::endl;
     std::cin >> extension;
-    std::cout << "Quel fichier souhaitez-vous vérifier ?" << std::endl;
-    std::cin >> str;
     if (my_strlen(extension) > 5)
         return (84);
+    std::cout << "Quel fichier souhaitez-vous vérifier ?" << std::endl;
+    std::cin >> str;
     for (int k = 0; str[k] != '\0' && verif_dot != true; k++) {
         if (str[k] == '.')
             verif_dot = true;

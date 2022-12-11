@@ -1,8 +1,8 @@
 /**
  * @ Author: LORD
  * @ Create Time: 2022-05-12 14:17:42
- * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-16 14:45:46
+ * @ Modified by: Valentin LAGARD
+ * @ Modified time: 2022-11-28 15:33:14
  * @ Description: main file
  */
 
@@ -34,6 +34,18 @@ int main(int ac, char **av)
                     break;
                 case '4':
                     extension();
+                    break;
+                case '5':
+                    oscilloscope();
+                    break;
+                case '6':
+                    temperature();
+                    break;
+                case '7':
+                    pseudo();
+                    break;
+                case '8':
+                    nom_prenom();
                     break;
                 default:
                     break;

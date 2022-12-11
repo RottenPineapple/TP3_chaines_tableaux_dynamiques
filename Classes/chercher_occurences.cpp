@@ -1,8 +1,8 @@
 /**
  * @ Author: LORD
  * @ Create Time: 2022-10-04 16:28:10
- * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-16 14:45:24
+ * @ Modified by: Valentin LAGARD
+ * @ Modified time: 2022-11-27 21:40:12
  * @ Description: Cherche les occurences de lettres dans un prénom
  */
 
@@ -29,5 +29,5 @@ void nb_occurences()
         if (lettre == str[i])
             occ++;
     }
-    std::cout << "Il y a " << occ << " \"" << lettre << "\" dans \"" << str << "\".";
+    std::cout << "Il y a " << occ << " \"" << lettre << "\" dans \"" << str << "\"." << std::endl;
 }

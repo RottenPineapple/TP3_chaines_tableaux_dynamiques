@@ -1,8 +1,8 @@
 /**
  * @ Author: LORD
  * @ Create Time: 2022-05-12 14:40:19
- * @ Modified by: vlagard@btslivh.eu
- * @ Modified time: 2022-11-16 14:59:38
+ * @ Modified by: Valentin LAGARD
+ * @ Modified time: 2022-11-28 15:32:57
  * @ Description: header file
  */
 
@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <stdlib.h>
 
 int my_strlen(char const *str);
 void capitalize_decapitalize();
@@ -21,5 +22,9 @@ void show_bts3();
 int my_strcmp(char *str1, char *str2);
 void *my_strcat(char *str1, char *str2);
 int extension();
+void oscilloscope();
+void temperature();
+void pseudo();
+void nom_prenom();
 
 #endif /* !HEADER_H_ */
